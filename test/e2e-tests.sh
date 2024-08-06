@@ -112,7 +112,8 @@ test_dashboard() {
   $tekton_repo_dir/scripts/installer uninstall $@
 }
 
-header "Building browser E2E image"
+echo "============ COMMENTED HEADER ================"
+#header "Building browser E2E image"
 echo "Started at $(date)"
 DOCKER_BUILDKIT=1 docker build -t dashboard-e2e packages/e2e || fail_test "Failed building browser E2E image"
 echo "Finished at $(date)"
