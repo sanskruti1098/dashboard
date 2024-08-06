@@ -113,7 +113,8 @@ test_dashboard() {
 }
 
 echo "============ COMMENTED HEADER ================"
-#header "Building browser E2E image"
+# header "Building browser E2E image"
+
 echo "Started at $(date)"
 DOCKER_BUILDKIT=1 docker build -t dashboard-e2e packages/e2e || fail_test "Failed building browser E2E image"
 echo "Finished at $(date)"
